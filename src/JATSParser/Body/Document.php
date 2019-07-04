@@ -24,7 +24,7 @@ class Document {
 	private $references = array();
 
 
-	function __construct(?string $documentPath) {
+	function __construct(string $documentPath) {
 		$document = new \DOMDocument;
 		$this->document = $document->load($documentPath);
 		self::$xpath = new \DOMXPath($document);
